@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 import { getWhatsAppUrl } from "../utils/whatsappRouter";
+import logoImg from "../assets/images/MakeoverByDharaShah.webp";
 
 interface NavbarProps {
   onNavigate: (sectionId: string) => void;
@@ -26,8 +27,8 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
   const navLinks = [
     { label: "HOME", id: "home" },
     { label: "SERVICES", id: "services" },
-    { label: "PORTFOLIO", id: "portfolio" },
     { label: "ABOUT", id: "about" },
+    { label: "PORTFOLIO", id: "portfolio" },
     { label: "TESTIMONIALS", id: "testimonials" },
     { label: "CONTACT", id: "contact" },
   ];
@@ -45,26 +46,24 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
   return (
     <header
       id="main-navbar"
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-100 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#E3B4B9]/15 py-3"
-          : "bg-transparent py-5"
+          ? "bg-white/95 shadow-sm py-2"
+          : "bg-transparent py-3"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">  
         {/* Logo Section */}
         <div 
           onClick={() => handleLinkClick("home")}
-          className="flex items-center space-x-2 cursor-pointer group"
+          className="flex items-center cursor-pointer group"
           id="nav-logo-container"
         >
-          <Sparkles className="h-5 w-5 text-[#E3B4B9] group-hover:rotate-12 transition-transform duration-300" />
-          <span 
-            className="text-lg md:text-xl font-serif tracking-normal text-[#4A3E3D] hover:text-[#E3B4B9] transition-colors"
-            style={{ fontWeight: 500 }}
-          >
-            Makeover by Dhara Shah
-          </span>
+          <img 
+            src={logoImg} 
+            alt="Makeover by Dhara Shah" 
+            className="h-18 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+          />
         </div>
 
         {/* Desktop Navigation Links */}
@@ -119,7 +118,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
       {/* Mobile Drawer Overlay */}
       {isMobileMenuOpen && (
         <div 
-          className="lg:hidden fixed inset-0 top-[60px] bg-white z-40 flex flex-col px-6 py-8 space-y-6 border-t border-[#E3B4B9]/10"
+          className="lg:hidden fixed inset-0 top-[86px] bg-white z-40 flex flex-col px-6 py-8 space-y-6 border-t border-[#E3B4B9]/10"
           id="mobile-nav-panel"
         >
           {navLinks.map((link) => (

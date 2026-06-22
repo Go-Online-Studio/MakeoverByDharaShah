@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { getWhatsAppUrl } from "../utils/whatsappRouter";
+import profileImage from "../assets/images/profileImage.webp";
 
 export default function Hero() {
   const handleRequestQuote = () => {
@@ -81,10 +82,9 @@ export default function Hero() {
                 id="hero-mask-container"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1615247001958-f4bc92fa6a4a?q=80&w=720"
+                  src={profileImage}
                   alt="Elegant Bridal Transformation by Dhara Shah"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center scale-[1.08] hover:scale-112 mix-blend-multiply opacity-90 transition-transform duration-[4000ms] ease-out-quint"
+                  className="w-full h-full object-cover object-center scale-[1.08] hover:scale-112 opacity-90 transition-transform duration-[4000ms] ease-out-quint"
                   width="720"
                   height="720"
                   id="hero-bridal-portrait"

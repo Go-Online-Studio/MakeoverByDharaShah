@@ -1,5 +1,6 @@
 import { Instagram, Phone, MapPin, Mail, Clock, Sparkles, Send, MessageSquare } from "lucide-react";
 import { getWhatsAppUrl } from "../utils/whatsappRouter";
+import logoImg from "../assets/images/MakeoverByDharaShah.webp";
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -15,8 +16,7 @@ export default function Footer({ onNavigate }: FooterProps) {
   };
 
   const handleDirections = () => {
-    const query = encodeURIComponent("Akota Garden Akshardham Apartments, Akota, Vadodara, Gujarat 390020");
-    window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, "_blank", "noopener,noreferrer");
+    window.open(`https://maps.app.goo.gl/gZZGYbGt3HKjfBcJ8`, "_blank", "noopener,noreferrer");
   };
 
   // Structured Data Schema injection (SEO Standard LocalBusiness)
@@ -75,13 +75,14 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* 3-Column main footer cluster */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-[#F9F6F0]" id="footer-top-cluster">
           
-          {/* COLUMN 1: Brand description, Business hours & Socials (5 Coils) */}
-          <div className="lg:col-span-5 space-y-6" id="footer-col-1-brand">
-            <div className="flex items-center space-x-2 group cursor-pointer" onClick={() => onNavigate("home")}>
-              <Sparkles className="h-5 w-5 text-[#E3B4B9] group-hover:rotate-12 transition-transform duration-300" />
-              <span className="text-xl font-serif text-[#4A3E3D] tracking-wide" style={{ fontWeight: 500 }}>
-                Makeover by Dhara Shah
-              </span>
+          {/* COLUMN 1: Brand description, Business hours & Socials */}
+          <div className="lg:col-span-5 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left" id="footer-col-1-brand">
+            <div className="flex items-center justify-center lg:justify-start group cursor-pointer" onClick={() => onNavigate("home")}>
+              <img 
+                src={logoImg} 
+                alt="Makeover by Dhara Shah" 
+                className="h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              />
             </div>
             
             <p className="text-[#8A7A78] text-sm font-light leading-relaxed font-sans max-w-sm">
@@ -89,19 +90,19 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
 
             {/* Operating Hours Block */}
-            <div className="space-y-2 mt-4" id="footer-operating-hours">
-              <h4 className="text-xs font-bold tracking-widest uppercase text-[#4A3E3D] flex items-center space-x-2">
+            <div className="space-y-2 mt-4 w-full" id="footer-operating-hours">
+              <h4 className="text-xs font-bold tracking-widest uppercase text-[#4A3E3D] flex items-center justify-center lg:justify-start space-x-2">
                 <Clock className="w-3.5 h-3.5 text-[#E3B4B9]" />
                 <span>STUDIO HOURS</span>
               </h4>
-              <div className="text-xs text-[#8A7A78] font-light space-y-1 pl-5.5 font-sans">
+              <div className="text-xs text-[#8A7A78] font-light space-y-1 font-sans">
                 <p>Monday – Saturday : 11:00 AM – 7:00 PM</p>
                 <p>Sunday : 12:00 PM – 5:00 PM</p>
               </div>
             </div>
 
             {/* Visual Social handles */}
-            <div className="flex items-center space-x-3 pt-2" id="footer-social-panel">
+            <div className="flex items-center justify-center lg:justify-start space-x-3 pt-2" id="footer-social-panel">
               <span className="text-xs tracking-wider text-[#8A7A78] uppercase font-bold mr-1">FOLLOW:</span>
               <a
                 href="https://www.instagram.com/makeoverbydharashah/"
@@ -127,13 +128,13 @@ export default function Footer({ onNavigate }: FooterProps) {
             </div>
           </div>
 
-          {/* COLUMN 2: Quick navigation anchors links (3 Coils) */}
-          <div className="lg:col-span-3 space-y-6" id="footer-col-2-navigation">
-            <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#4A3E3D] border-b border-[#F9F6F0] pb-2">
+          {/* COLUMN 2: Quick navigation anchors links */}
+          <div className="lg:col-span-3 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left" id="footer-col-2-navigation">
+            <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#4A3E3D] border-b border-[#F9F6F0] pb-2 w-full text-center lg:text-left">
               QUICK NAVIGATION
             </h4>
             
-            <nav className="flex flex-col space-y-3" id="footer-nav-links">
+            <nav className="flex flex-col items-center lg:items-start space-y-3" id="footer-nav-links">
               {[
                 { label: "Home", id: "home" },
                 { label: "Our Services", id: "services" },
@@ -145,7 +146,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <button
                   key={link.id}
                   onClick={() => onNavigate(link.id)}
-                  className="text-left text-sm text-[#8A7A78] hover:text-[#E3B4B9] transition-colors duration-300 font-sans font-light"
+                  className="text-sm text-[#8A7A78] hover:text-[#E3B4B9] transition-colors duration-300 font-sans font-light"
                   id={`footer-nav-link-${link.id}`}
                 >
                   {link.label}
@@ -154,28 +155,28 @@ export default function Footer({ onNavigate }: FooterProps) {
             </nav>
           </div>
 
-          {/* COLUMN 3: Contact & Studio Map location (4 Coils) */}
-          <div className="lg:col-span-4 space-y-6" id="footer-col-3-details">
-            <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#4A3E3D] border-b border-[#F9F6F0] pb-2">
+          {/* COLUMN 3: Contact & Studio Map location */}
+          <div className="lg:col-span-4 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left" id="footer-col-3-details">
+            <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#4A3E3D] border-b border-[#F9F6F0] pb-2 w-full text-center lg:text-left">
               CONTACT & STUDIO
             </h4>
 
-            <div className="space-y-4 font-sans text-sm font-light text-[#8A7A78]" id="footer-contact-info">
+            <div className="space-y-4 font-sans text-sm font-light text-[#8A7A78] w-full max-w-[280px]" id="footer-contact-info">
               
               {/* Address Link */}
               <div 
-                className="flex items-start space-x-3 cursor-pointer group"
+                className="flex items-start justify-center lg:justify-start space-x-3 cursor-pointer group"
                 onClick={handleDirections}
                 id="footer-address-link"
               >
                 <MapPin className="w-5 h-5 text-[#E3B4B9] group-hover:scale-110 transition-transform mt-0.5 shrink-0" />
-                <span className="group-hover:text-[#E3B4B9] transition-colors duration-300 leading-relaxed">
+                <span className="group-hover:text-[#E3B4B9] transition-colors duration-300 leading-relaxed text-left">
                   {address}
                 </span>
               </div>
 
               {/* Dial-in Link */}
-              <div className="flex items-center space-x-3" id="footer-phone-link">
+              <div className="flex items-center justify-center lg:justify-start space-x-3" id="footer-phone-link">
                 <Phone className="w-4.5 h-4.5 text-[#E3B4B9] shrink-0" />
                 <a 
                   href={`tel:${phoneNumber.replace(/\s+/g, '')}`} 
@@ -187,7 +188,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </div>
 
               {/* Email Link */}
-              <div className="flex items-center space-x-3" id="footer-email-link">
+              <div className="flex items-center justify-center lg:justify-start space-x-3" id="footer-email-link">
                 <Mail className="w-4.5 h-4.5 text-[#E3B4B9] shrink-0" />
                 <a 
                   href="mailto:info@makeoverbydharashah.com" 
@@ -200,8 +201,8 @@ export default function Footer({ onNavigate }: FooterProps) {
 
             </div>
 
-            {/* Directions Action Button with responsive mini-map vector icon preview */}
-            <div className="pt-2" id="footer-cta-directions">
+            {/* Directions Action Button */}
+            <div className="pt-2 w-full" id="footer-cta-directions">
               <button
                 onClick={handleDirections}
                 className="w-full text-center text-xs tracking-widest font-semibold border-2 border-[#B5C7CD] hover:bg-[#B5C7CD]/10 text-[#4A3E3D] px-6 py-2.5 rounded-full transition-all duration-300 flex items-center justify-center space-x-2"
@@ -217,8 +218,8 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
 
         {/* Bottom copyright & micro-credits */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-center text-xs text-[#8A7A78] font-light font-sans" id="footer-bottom-copyright">
-          <p>© 2026 All Rights Reserved by Makeover By Dhara Shah. Designed and developed by <a className="hover:text-[#E3B4B9]" href="https://shriiitrackingsolution.in/" target="_blank"> <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-center text-center text-xs text-[#8A7A78] font-light font-sans" id="footer-bottom-copyright">
+          <p className="text-center">© 2026 All Rights Reserved by Makeover By Dhara Shah. Designed and developed by <a className="hover:text-[#E3B4B9]" href="https://shriiitrackingsolution.in/" target="_blank"> <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
           </a></p>
         </div>
 
@@ -226,3 +227,4 @@ export default function Footer({ onNavigate }: FooterProps) {
     </footer>
   );
 }
+

@@ -37,10 +37,10 @@ const portfolioData: PortfolioItem[] = [
     colorTheme: "pink"
   },
   {
-    id: 4,
+    id: 4, 
     category: "hair",
     title: "Textured Hollywood Waves",
-    imgUrl: "https://images.unsplash.com/photo-1560869713-7d0a29430f33?q=80&w=640",
+    imgUrl: "https://images.unsplash.com/photo-1594465919760-441fe5908ab0?q=80&w=640",
     instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
     colorTheme: "blue"
   },
@@ -64,7 +64,7 @@ const portfolioData: PortfolioItem[] = [
     id: 7,
     category: "bridal",
     title: "Mehendi Glam & Soft Lashes",
-    imgUrl: "https://images.unsplash.com/photo-1588001832198-c15cff59b078?q=80&w=640",
+    imgUrl: "https://images.unsplash.com/photo-1525135850648-b42365991054?q=80&w=640",
     instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
     colorTheme: "pink"
   },
