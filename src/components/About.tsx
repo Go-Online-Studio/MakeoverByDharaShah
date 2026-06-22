@@ -134,7 +134,7 @@ export default function About() {
                 </div>
 
                 {/* Highlight badges */}
-                <div className="grid grid-cols-2 gap-4 py-4 border-t border-b border-[#E3B4B9]/15" id="about-highlights">
+                <div className="grid grid-col-1 sm:grid-cols-2 gap-4 py-4 border-t border-b border-[#E3B4B9]/15" id="about-highlights">
                   <div className="flex items-start space-x-3">
                     <div className="bg-[#B5C7CD]/30 p-2 rounded-full mt-1">
                       <Sparkles className="w-4 h-4 text-[#4A3E3D]" />
