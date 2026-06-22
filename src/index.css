@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-luxury-bg: #F9F6F0;
+  --color-luxury-surface: #FFFFFF;
+  --color-luxury-text: #4A3E3D;
+  --color-luxury-muted: #8A7A78;
+  --color-luxury-pink: #E3B4B9;
+  --color-luxury-blue: #B5C7CD;
+}
+
+@keyframes floatGentleUp {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg) scale(1.02);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes floatGentleDown {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(12px) rotate(-3deg) scale(0.98);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+}
+
+.animate-float-up {
+  animation: floatGentleUp 8s ease-in-out infinite;
+}
+
+.animate-float-down {
+  animation: floatGentleDown 10s ease-in-out infinite;
+}
+
+.font-heading {
+  font-family: "Playfair Display", "Times New Roman", serif;
+}
+
+.font-body {
+  font-family: "Lato", sans-serif;
+}
+
+button,a{
+  cursor: pointer;
+}
