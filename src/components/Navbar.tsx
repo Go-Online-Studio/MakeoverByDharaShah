@@ -62,7 +62,9 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
           <img 
             src={logoImg} 
             alt="Makeover by Dhara Shah" 
-            className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
 

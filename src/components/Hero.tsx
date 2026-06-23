@@ -87,6 +87,8 @@ export default function Hero() {
                   className="w-full h-full object-cover object-center scale-[1.08] hover:scale-112 opacity-90 transition-transform duration-[4000ms] ease-out-quint"
                   width="720"
                   height="720"
+                  loading="eager"
+                  fetchPriority="high"
                   id="hero-bridal-portrait"
                 />
               </div>
