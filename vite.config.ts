@@ -5,8 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    // Required for GitHub Pages — must match your repository name
-    base: '/MakeoverByDharaShah/',
+    // Use relative paths for assets so it works on cPanel, Namecheap, and local Live Server
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
