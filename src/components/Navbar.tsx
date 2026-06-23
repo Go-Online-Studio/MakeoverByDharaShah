@@ -64,7 +64,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
             alt="Makeover by Dhara Shah" 
             className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             loading="eager"
-            fetchPriority="high"
+            fetchPriority="high" 
           />
         </div>
 
