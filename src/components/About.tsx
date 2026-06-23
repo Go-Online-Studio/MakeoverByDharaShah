@@ -17,7 +17,7 @@ export default function About() {
       {/* Background soft light leaks & floating decorative elements */}
       <div className="absolute inset-0 pointer-events-none select-none z-10" id="about-decorations">
         {/* Soft pastel blue leaf background */}
-        <div className="absolute bottom-[10%] left-[5%] w-24 h-24 text-[#B5C7CD]/20 animate-float-down">
+        <div className="absolute bottom-[10%] left-[5%] w-24 h-24 text-[#6f95a9]/20 animate-float-down">
           <svg viewBox="0 0 100 100" fill="currentColor" className="w-full h-full">
             <path d="M90 10C50 20 20 50 10 90C45 80 80 45 90 10Z"/>
           </svg>
@@ -47,7 +47,7 @@ export default function About() {
               >
                 {/* Decorative outer circle rings */}
                 <div className="absolute inset-[-8px] border border-[#E3B4B9]/20 rounded-full animate-pulse opacity-40" />
-                <div className="absolute inset-[-18px] border border-[#B5C7CD]/15 rounded-full animate-float-up opacity-30" />
+                <div className="absolute inset-[-18px] border border-[#6f95a9]/15 rounded-full animate-float-up opacity-30" />
 
                 {/* Perfect circle portrait container */}
                 <div 
@@ -67,7 +67,7 @@ export default function About() {
 
                 {/* Monstera Botanical Leaf Cutout Overlay */}
                 <div 
-                  className="absolute bottom-[-15px] left-[-20px] w-32 h-32 text-[#B5C7CD] drop-shadow-md select-none opacity-90 animate-float-up"
+                  className="absolute bottom-[-15px] left-[-20px] w-32 h-32 text-[#6f95a9] drop-shadow-md select-none opacity-90 animate-float-up"
                   id="about-monstera-graphic"
                 >
                   <svg viewBox="0 0 100 100" fill="currentColor" className="w-full h-full">
@@ -136,7 +136,7 @@ export default function About() {
                 {/* Highlight badges */}
                 <div className="grid grid-col-1 sm:grid-cols-2 gap-4 py-4 border-t border-b border-[#E3B4B9]/15" id="about-highlights">
                   <div className="flex items-start space-x-3">
-                    <div className="bg-[#B5C7CD]/30 p-2 rounded-full mt-1">
+                    <div className="bg-[#6f95a9]/30 p-2 rounded-full mt-1">
                       <Sparkles className="w-4 h-4 text-[#4A3E3D]" />
                     </div>
                     <div>

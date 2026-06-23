@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Gem, Palette, Scissors, Sparkles, Check, ArrowRight, Minus, Plus, MessageSquare } from "lucide-react";
 import { getWhatsAppUrl } from "../utils/whatsappRouter";
+import { p } from "motion/react-client";
 
 interface ServiceItem {
   id: string;
@@ -25,7 +26,7 @@ const servicesData: ServiceItem[] = [
     category: "BRIDAL GLAMOUR",
     priceText: "₹18,000 onwards",
     basePrice: 18000,
-    bgColor: "bg-[#B5C7CD]", // Soft pastel slate blue
+    bgColor: "bg-[#cfe2e9ff]", // Soft pastel slate blue
     borderColor: "border-[#4A3E3D]/10",
     badge: "Royalty Collection",
     description: "Impeccable, durable, and photographically ready bridal makeovers custom tailored for your heritage outfit and jewelry.",
@@ -43,7 +44,7 @@ const servicesData: ServiceItem[] = [
     category: "CELEBRATION GLOW",
     priceText: "₹7,500 onwards",
     basePrice: 7500,
-    bgColor: "bg-[#E3B4B9]", // Soft blush pastel pink
+    bgColor: "bg-[#f0ced1ff]", // Soft blush pastel pink
     borderColor: "border-[#4A3E3D]/10",
     badge: "Guest of Honor",
     description: "Flawless, lightweight dewy glow formulated to look fresh for sangeet nights, receptions, and pre-wedding functions.",
@@ -61,7 +62,7 @@ const servicesData: ServiceItem[] = [
     category: "CROWN & BRAIDS",
     priceText: "₹4,500 onwards",
     basePrice: 4500,
-    bgColor: "bg-[#E3B4B9]", // Soft blush pastel pink
+    bgColor: "bg-[#f0ced1ff]", // Soft blush pastel pink
     borderColor: "border-[#4A3E3D]/10",
     badge: "Structural Elegance",
     description: "Professional structural hairdos ranging from timeless traditional flower-adorned braids to signature waves.",
@@ -79,7 +80,7 @@ const servicesData: ServiceItem[] = [
     category: "PRIME & DEWY",
     priceText: "₹3,000 onwards",
     basePrice: 3000,
-    bgColor: "bg-[#B5C7CD]", // Soft pastel slate blue
+    bgColor: "bg-[#cfe2e9ff]", // Soft pastel slate blue
     borderColor: "border-[#4A3E3D]/10",
     badge: "Luminous Prep",
     description: "The ideal pre-makeup skin therapy focusing on heavy rehydration, de-puffing, and pH restoration mapping.",

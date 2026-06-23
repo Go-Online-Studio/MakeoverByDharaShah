@@ -62,7 +62,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
           <img 
             src={logoImg} 
             alt="Makeover by Dhara Shah" 
-            className="h-18 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
           />
         </div>
 
@@ -118,7 +118,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
       {/* Mobile Drawer Overlay */}
       {isMobileMenuOpen && (
         <div 
-          className="lg:hidden fixed inset-0 top-[86px] bg-white z-40 flex flex-col px-6 py-8 space-y-6 border-t border-[#E3B4B9]/10"
+          className="lg:hidden fixed inset-0 top-[71px] bg-white z-40 flex flex-col px-6 py-8 space-y-6 border-t border-[#E3B4B9]/10"
           id="mobile-nav-panel"
         >
           {navLinks.map((link) => (

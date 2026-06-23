@@ -3,13 +3,13 @@
 @theme {
   --font-sans: "Lato", sans-serif;
   --font-serif: "Playfair Display", serif;
-  
-  --color-luxury-bg: #F9F6F0;
-  --color-luxury-surface: #FFFFFF;
-  --color-luxury-text: #4A3E3D;
-  --color-luxury-muted: #8A7A78;
-  --color-luxury-pink: #E3B4B9;
-  --color-luxury-blue: #B5C7CD;
+
+  --color-luxury-bg: #f9f6f0;
+  --color-luxury-surface: #ffffff;
+  --color-luxury-text: #4a3e3d;
+  --color-luxury-muted: #8a7a78;
+  --color-luxury-pink: #e3b4b9;
+  --color-luxury-blue: #6f95a9;
 }
 
 @keyframes floatGentleUp {
@@ -52,6 +52,7 @@
   font-family: "Lato", sans-serif;
 }
 
-button,a{
+button,
+a {
   cursor: pointer;
 }

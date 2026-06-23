@@ -81,7 +81,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <img 
                 src={logoImg} 
                 alt="Makeover by Dhara Shah" 
-                className="h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </div>
             
@@ -108,7 +108,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="https://www.instagram.com/makeoverbydharashah/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#F9F6F0] hover:bg-[#E3B4B9]/25 text-[#4A3E3D] hover:text-[#E3B4B9] p-2.5 rounded-full transition-colors duration-300 shadow-sm"
+                className="bg-[#F9F6F0] hover:bg-[#b98a8f]/25 text-[#4A3E3D] hover:text-[#b98a8f] p-2.5 rounded-full transition-colors duration-300 shadow-sm"
                 aria-label="Instagram Page"
                 id="footer-social-instagram"
               >
@@ -116,9 +116,9 @@ export default function Footer({ onNavigate }: FooterProps) {
               </a>
               <button
                 onClick={handleWhatsApp}
-                className="bg-[#F9F6F0] hover:bg-[#B5C7CD]/25 text-[#4A3E3D] hover:text-[#B5C7CD] p-2.5 rounded-full transition-colors duration-300 shadow-sm"
+                className="bg-[#F9F6F0] hover:bg-[#6f95a9]/25 text-[#4A3E3D] hover:text-[#6f95a9] p-2.5 rounded-full transition-colors duration-300 shadow-sm"
                 aria-label="WhatsApp"
-                id="footer-social-whatsapp"
+                id="footer-social-whatsapp" 
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                   <path d="M0 0h24v24H0z" fill="none" />
@@ -146,7 +146,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <button
                   key={link.id}
                   onClick={() => onNavigate(link.id)}
-                  className="text-sm text-[#8A7A78] hover:text-[#E3B4B9] transition-colors duration-300 font-sans font-light"
+                  className="text-sm font-medium text-[#4A3E3D] hover:text-[#b98a8f] transition-colors duration-300 font-sans font-light"
                   id={`footer-nav-link-${link.id}`}
                 >
                   {link.label}
@@ -170,7 +170,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 id="footer-address-link"
               >
                 <MapPin className="w-5 h-5 text-[#E3B4B9] group-hover:scale-110 transition-transform mt-0.5 shrink-0" />
-                <span className="group-hover:text-[#E3B4B9] transition-colors duration-300 leading-relaxed text-left">
+                <span className="group-hover:text-[#b98a8f] transition-colors font-medium text-[#4A3E3D] leading-relaxed text-left">
                   {address}
                 </span>
               </div>
@@ -180,7 +180,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <Phone className="w-4.5 h-4.5 text-[#E3B4B9] shrink-0" />
                 <a 
                   href={`tel:${phoneNumber.replace(/\s+/g, '')}`} 
-                  className="hover:text-[#E3B4B9] transition-colors font-medium text-[#4A3E3D]"
+                  className="hover:text-[#b98a8f] transition-colors font-medium text-[#4A3E3D]"
                   id="footer-phone-anchor"
                 >
                   {phoneNumber}
@@ -192,7 +192,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <Mail className="w-4.5 h-4.5 text-[#E3B4B9] shrink-0" />
                 <a 
                   href="mailto:info@makeoverbydharashah.com" 
-                  className="hover:text-[#E3B4B9] transition-colors"
+                  className="hover:text-[#b98a8f] transition-colors font-medium text-[#4A3E3D]"
                   id="footer-email-anchor"
                 >
                   info@makeoverbydharashah.com
@@ -205,10 +205,10 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="pt-2 w-full" id="footer-cta-directions">
               <button
                 onClick={handleDirections}
-                className="w-full text-center text-xs tracking-widest font-semibold border-2 border-[#B5C7CD] hover:bg-[#B5C7CD]/10 text-[#4A3E3D] px-6 py-2.5 rounded-full transition-all duration-300 flex items-center justify-center space-x-2"
+                className="w-full text-center text-xs tracking-widest font-semibold border-2 border-[#6f95a9] hover:bg-[#6f95a9]/10 text-[#4A3E3D] px-6 py-2.5 rounded-full transition-all duration-300 flex items-center justify-center space-x-2"
                 id="footer-directions-button"
               >
-                <MapPin className="w-3.5 h-3.5 text-[#B5C7CD]" />
+                <MapPin className="w-3.5 h-3.5 text-[#6f95a9]" />
                 <span>GET GOOGLE MAP DIRECTIONS</span>
               </button>
             </div>
@@ -219,7 +219,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Bottom copyright & micro-credits */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-center text-center text-xs text-[#8A7A78] font-light font-sans" id="footer-bottom-copyright">
-          <p className="text-center">© 2026 All Rights Reserved by Makeover By Dhara Shah. Designed and developed by <a className="hover:text-[#E3B4B9]" href="https://shriiitrackingsolution.in/" target="_blank"> <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
+          <p className="text-center">© 2026 All Rights Reserved by Makeover By Dhara Shah. Designed and developed by <a className="hover:text-[#cf9da2ff]" href="https://shriiitrackingsolution.in/" target="_blank"> <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
           </a></p>
         </div>
 

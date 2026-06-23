@@ -154,7 +154,7 @@ export default function Testimonials() {
                   key={i}
                   onClick={() => setCurrentIndex(i)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    currentIndex === i ? "bg-[#E3B4B9] w-6" : "bg-[#B5C7CD] w-2"
+                    currentIndex === i ? "bg-[#E3B4B9] w-6" : "bg-[#6f95a9] w-2"
                   }`}
                   aria-label={`Go to slide ${i + 1}`}
                   id={`slider-dot-${i}`}

@@ -2,9 +2,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Instagram, Sparkles, Filter } from "lucide-react";
 
+// ── Local portfolio images (Vite resolves & hashes these at build time) ──
+import imgHaldi from "../assets/images/Haldi,MakeupAndHair.webp";
+import imgLightElegance from "../assets/images/LightMakeup,HeavyElegance.webp";
+import imgMakeupHair from "../assets/images/MakeupAndHair.webp";
+import imgParty from "../assets/images/PartyMakeup.webp";
+import imgRandom from "../assets/images/RandamMakeupClips.webp";
+import imgSoftRadiant from "../assets/images/Soft,Radiant,AndNaturallyBeautiful.webp";
+import imgTradition from "../assets/images/TraditionLookWithModernCharm.webp";
+import imgWedding from "../assets/images/WeddingMakeup.webp";
+
 interface PortfolioItem {
   id: number;
-  category: "bridal" | "party" | "hair" | "skin";
+  category: "bridal" | "party" | "makeup";
   title: string;
   imgUrl: string;
   instagramUrl: string;
@@ -15,78 +25,77 @@ const portfolioData: PortfolioItem[] = [
   {
     id: 1,
     category: "bridal",
-    title: "Royal Traditional Bride",
-    imgUrl: "https://images.unsplash.com/photo-1615247001958-f4bc92fa6a4a?q=80&w=640",
-    instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
+    title: "Haldi Bridal Ceremony",
+    imgUrl: imgHaldi,
+    instagramUrl: "https://www.instagram.com/makeoverbydharashah/reel/DXwZnM0NKlU/",
     colorTheme: "pink"
   },
   {
     id: 2,
     category: "party",
-    title: "Chic Evening Glow Makeover",
-    imgUrl: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=640",
-    instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
+    title: "Light & Elegant Glamour",
+    imgUrl: imgLightElegance,
+    instagramUrl: "https://www.instagram.com/makeoverbydharashah/reel/DYya7BkP-gf/",
     colorTheme: "blue"
   },
   {
     id: 3,
-    category: "bridal",
-    title: "Heritage Kundan Bridal Art",
-    imgUrl: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=640",
-    instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
+    category: "makeup",
+    title: "Signature Artistry",
+    imgUrl: imgMakeupHair,
+    instagramUrl: "https://www.instagram.com/artofpixels_fashion/reel/DYbVcmYKyHZ/",
     colorTheme: "pink"
   },
   {
     id: 4, 
-    category: "hair",
-    title: "Textured Hollywood Waves",
-    imgUrl: "https://images.unsplash.com/photo-1594465919760-441fe5908ab0?q=80&w=640",
-    instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
+    category: "party",
+    title: "Evening Party Glow",
+    imgUrl: imgParty,
+    instagramUrl: "https://www.instagram.com/makeoverbydharashah/reel/DZXywVDPCPs/",
     colorTheme: "blue"
   },
   {
     id: 5,
-    category: "skin",
-    title: "Dewy Glass-Skin Radiance",
-    imgUrl: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=640",
-    instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
+    category: "makeup",
+    title: "Creative Artistry Clips",
+    imgUrl: imgRandom,
+    instagramUrl: "https://www.instagram.com/makeoverbydharashah/reel/DXedgn6Dwy0/",
     colorTheme: "pink"
   },
   {
     id: 6,
-    category: "party",
-    title: "Soft Pastels Sangeet Polish",
-    imgUrl: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=640",
-    instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
+    category: "makeup",
+    title: "Soft Natural Radiance",
+    imgUrl: imgSoftRadiant,
+    instagramUrl: "https://www.instagram.com/makeoverbydharashah/reel/DZ47wCHNMsu/",
     colorTheme: "blue"
   },
   {
     id: 7,
     category: "bridal",
-    title: "Mehendi Glam & Soft Lashes",
-    imgUrl: "https://images.unsplash.com/photo-1525135850648-b42365991054?q=80&w=640",
-    instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
+    title: "Modern Traditional Charm",
+    imgUrl: imgTradition,
+    instagramUrl: "https://www.instagram.com/rainbow_nails_makeup_/p/DXHl5jpjLdl/?img_index=1",
     colorTheme: "pink"
   },
   {
     id: 8,
-    category: "hair",
-    title: "French Braided Bun with Flora",
-    imgUrl: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=640",
-    instagramUrl: "https://www.instagram.com/makeoverbydharashah/",
+    category: "bridal",
+    title: "Timeless Wedding Bridal",
+    imgUrl: imgWedding,
+    instagramUrl: "https://www.instagram.com/makeoverbydharashah/reel/DX4HkEBt3TB/",
     colorTheme: "blue"
   }
 ];
 
 export default function Portfolio() {
-  const [activeFilter, setActiveFilter] = useState<"all" | "bridal" | "party" | "hair" | "skin">("all");
+  const [activeFilter, setActiveFilter] = useState<"all" | "bridal" | "party" | "makeup">("all");
 
   const filterTabs: { label: string; id: typeof activeFilter }[] = [
     { label: "ALL", id: "all" },
     { label: "BRIDAL", id: "bridal" },
     { label: "PARTY", id: "party" },
-    { label: "HAIR", id: "hair" },
-    { label: "SKIN", id: "skin" }
+    { label: "MAKEUP", id: "makeup" }
   ];
 
   const filteredItems = portfolioData.filter(
@@ -97,7 +106,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-20 md:py-28 bg-white relative overflow-hidden">
       
       {/* Background Soft Blobs */}
-      <div className="absolute top-[30%] left-[8%] w-60 h-60 bg-[#B5C7CD]/10 rounded-full blur-[80px] pointer-events-none select-none" />
+      <div className="absolute top-[30%] left-[8%] w-60 h-60 bg-[#6f95a9]/10 rounded-full blur-[80px] pointer-events-none select-none" />
       <div className="absolute bottom-[20%] right-[5%] w-80 h-80 bg-[#E3B4B9]/15 rounded-full blur-[100px] pointer-events-none select-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
@@ -146,7 +155,7 @@ export default function Portfolio() {
           <AnimatePresence mode="popLayout">
             {filteredItems.map((item) => {
               // Custom theme color based on pink vs blue selector config
-              const overlayColor = item.colorTheme === "pink" ? "bg-[#E3B4B9]/85" : "bg-[#B5C7CD]/85";
+              const overlayColor = item.colorTheme === "pink" ? "bg-[#E3B4B9]/85" : "bg-[#9dc2cf]/85";
               
               return (
                 <motion.div

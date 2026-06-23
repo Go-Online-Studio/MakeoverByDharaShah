@@ -25,14 +25,14 @@ export default function Hero() {
 
         {/* Soft floating slate blue leaf - Left Center */}
         <div className="absolute top-[40%] left-[5%] w-14 h-14 animate-float-down opacity-35">
-          <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-[#B5C7CD]">
+          <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-[#6f95a9]">
             <path d="M90 90C60 70 20 80 10 10C40 30 80 20 90 90Z" fill="currentColor" />
             <path d="M90 90C60 50 10 10 10 10" stroke="#F9F6F0" strokeWidth="2" strokeLinecap="round" />
           </svg>
         </div>
 
         {/* Floating Dew Drop/Bubble - Bottom Right */}
-        <div className="absolute bottom-[20%] right-[15%] w-8 h-8 rounded-full bg-[#B5C7CD]/20 blur-[1px] animate-float-up" />
+        <div className="absolute bottom-[20%] right-[15%] w-8 h-8 rounded-full bg-[#6f95a9]/20 blur-[1px] animate-float-up" />
 
         {/* Warm light leak or ambient soft circle - Top Left background */}
         <div className="absolute -top-16 -left-16 w-80 h-80 rounded-full bg-[#E3B4B9]/10 blur-[100px]" />
@@ -70,11 +70,11 @@ export default function Hero() {
 
               {/* Overlapping organic watercolor style blobs surrounding the main figure */}
               <div className="absolute inset-2 bg-[#E3B4B9]/20 rounded-[55%_45%_50%_60%_/_50%_55%_45%_55%] -z-10 animate-float-down" />
-              <div className="absolute inset-5 bg-[#B5C7CD]/20 rounded-[45%_55%_60%_40%_/_55%_45%_55%_45%] -z-10 animate-float-up" />
+              <div className="absolute inset-5 bg-[#6f95a9]/20 rounded-[45%_55%_60%_40%_/_55%_45%_55%_45%] -z-10 animate-float-up" />
 
               {/* Main portrait inside organic fluid mask container */}
               <div 
-                className="w-full h-full overflow-hidden border border-[#E3B4B9]/30 shadow-lg transition-all duration-700 bg-[#B5C7CD]"
+                className="w-full h-full overflow-hidden border border-[#E3B4B9]/30 shadow-lg transition-all duration-700 bg-[#6f95a9]"
                 style={{
                   clipPath: "url(#blob-shape)",
                   WebkitClipPath: "url(#blob-shape)"
